@@ -72,10 +72,9 @@ def actualizacion_contacto():
     nombre_o_numero = input("Ingresa Nombre o teléfono del contacto a editar: ")
     for objContacto in listaContactos:
         if nombre_o_numero == objContacto.telefono or nombre_o_numero == objContacto.nombre:
-            nuevo_nombre = input("Ingresa el nuevo nombre: ")
-            nuevo_telefono = input("Ingresa el nuevo teléfono: ")
-            nueva_edad = input("Ingresa la nueva edad: ")
-            objContacto.actualizacion_contacto(nuevo_nombre, nuevo_telefono, nueva_edad)
+            objContacto.nombre = input("Ingresa el nuevo nombre: ")
+            objContacto.telefono = input("Ingresa el nuevo teléfono: ")
+            objContacto.edad = input("Ingresa la nueva edad: ")
             print("{} se actualizo correctamente".format(objContacto.nombre))
             objContacto.muestraDetalles()
 
